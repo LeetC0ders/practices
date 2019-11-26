@@ -28,7 +28,7 @@ class FizzBuzzTest {
     }
 
     @Test
-    fun getName() {
+    fun getNameTest() {
         assertEquals("FizzBuzz", fizzBuzz.getName())
     }
 
@@ -57,7 +57,7 @@ class FizzBuzzTest {
     }
 
     @Test
-    fun solve5() {
+    fun exceptionTest() {
         try {
             fizzBuzz.solve(0)
         } catch (exception: Exception) {

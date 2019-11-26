@@ -2,6 +2,7 @@ package practices.di
 
 import dagger.Component
 import practices.questions.easy.FizzBuzz
+import practices.questions.easy.TwoSum
 import javax.inject.Singleton
 
 @Singleton
@@ -9,5 +10,7 @@ import javax.inject.Singleton
 interface AppComponent {
 
     fun provideFizzBuzz() : FizzBuzz
+
+    fun provideTwoSum() : TwoSum
 
 }
