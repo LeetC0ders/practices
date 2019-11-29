@@ -1,5 +1,6 @@
 package practices.questions.easy
 
+import practices.questions.EMPTY_SOLUTION_IN
 import practices.questions.Solution
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -28,7 +29,7 @@ class TwoSum @Inject constructor() : Solution<Pair<IntArray, Int>, IntArray> {
         solutionIn?.let {
             return secondAttempt(it)
         }
-        throw Exception("Empty solutionIn")
+        throw Exception(EMPTY_SOLUTION_IN)
     }
 
     // Since this problem can have multiple implementation, we will have separate implementations
