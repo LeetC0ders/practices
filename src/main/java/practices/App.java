@@ -9,7 +9,7 @@ import practices.di.DaggerAppComponent;
 public class App {
 
     private static int problemCounter = 0;
-    private AppComponent appComponent = DaggerAppComponent.builder().build();
+    private AppComponent appComponent = DaggerAppComponent.create();
 
     public String getGreeting() {
         return "Hello, welcome to LeetCode practice";
@@ -20,6 +20,8 @@ public class App {
         App app = new App();
         System.out.println(app.getGreeting());
         printProblemSolved(app.getAppComponent().provideFizzBuzz().getName());
+        printProblemSolved(app.getAppComponent().provideTwoSum().getName());
+        printProblemSolved(app.getAppComponent().provideAddTwoNumbers().getName());
     }
 
     private static void printProblemSolved(String problemName) {
