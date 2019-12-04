@@ -3,6 +3,7 @@ package practices.questions.medium
 import practices.questions.EMPTY_SOLUTION_IN
 import practices.questions.Solution
 import javax.inject.Inject
+import javax.inject.Singleton
 import kotlin.collections.HashSet
 
 /*
@@ -19,6 +20,7 @@ import kotlin.collections.HashSet
 * Each output should be followed by a new line.
 *
 * */
+@Singleton
 class LongestSubstringWithoutRepeatingChars @Inject constructor(): Solution<String, Int> {
 
     override fun getName() = "LongestSubstringWithoutRepeatingChars"
