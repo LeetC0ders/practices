@@ -20,19 +20,26 @@ class SplitStringToBalancedString: Solution<String, Int> {
         throw Exception(EMPTY_SOLUTION_IN)
     }
 
+    /*
+    * Runtime: 140 ms, faster than 41.86% of Kotlin online submissions for Split a String in Balanced Strings.
+    * Memory Usage: 31.5 MB, less than 100.00% of Kotlin online submissions for Split a String in Balanced Strings.
+    * */
     fun firstAttempt(solutionIn: String): Int {
 
-        var map: MutableMap<Char, Int> = HashMap()
+        var counterArr = intArrayOf(0, 0) //[0] or R, [1] or L
         var counter = 0
 
-        map['R'] = 0
-        map['L'] = 0
+        counterArr[0] = 0
+        counterArr[1] = 0
 
         for (item in solutionIn) {
-            map[item] = map[item]!! + 1
-            if (map['R'] == map['L']) {
-                map['R'] = 0
-                map['L'] = 0
+            when (item) {
+                'R' -> counterArr[0]++
+                'L' -> counterArr[1]++
+            }
+            if (counterArr[0] == counterArr[1]) {
+                counterArr[0] = 0
+                counterArr[1] = 0
                 counter++
             }
         }
