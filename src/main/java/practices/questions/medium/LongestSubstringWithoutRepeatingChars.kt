@@ -2,11 +2,24 @@ package practices.questions.medium
 
 import practices.questions.EMPTY_SOLUTION_IN
 import practices.questions.Solution
-import java.lang.StringBuilder
-import java.util.*
+import javax.inject.Inject
 import kotlin.collections.HashSet
 
-class LongestSubstringWithoutRepeatingChars: Solution<String, Int> {
+/*
+* 003-LongestSubstringWithoutRepeatingCharacters
+*
+* Question:
+* Given a string, find the length of the longest substring without repeating characters.
+*
+* - If the number is a multiple of 3, print "Fizz" instead of the number.
+* - If the number is a multiple of 5, print "Buzz" instead of the number.
+* - If the number is a multiple of 15, print "FizzBuzz" instead of the number.
+* - Otherwise, print the number itself.
+*
+* Each output should be followed by a new line.
+*
+* */
+class LongestSubstringWithoutRepeatingChars @Inject constructor(): Solution<String, Int> {
 
     override fun getName() = "LongestSubstringWithoutRepeatingChars"
 
@@ -17,36 +30,28 @@ class LongestSubstringWithoutRepeatingChars: Solution<String, Int> {
         throw Exception(EMPTY_SOLUTION_IN)
     }
 
+    /*
+    * Runtime: 196 ms, faster than 86.48% of Kotlin online submissions for Longest Substring Without Repeating Characters.
+    * Memory Usage: 35.2 MB, less than 100.00% of Kotlin online submissions for Longest Substring Without Repeating Characters.
+    * */
     fun firstAttempt(solutionIn: String): Int {
+        val stringLength = solutionIn.length
 
-        val solutionInArr = solutionIn.split("")
+        var uniqueCharSet: MutableSet<Char> = HashSet()
+        var longestLength = 0
+        var startIndex = 0
+        var endIndex = 0
 
-        var uniqueStringSet: MutableSet<String> = HashSet()
-        var tempStringSet: MutableSet<String> = HashSet()
-        var stringBuilder = StringBuilder()
-        var heap = PriorityQueue<Int>(10, Collections.reverseOrder())
-
-        for(char in solutionInArr) {
-            if (!tempStringSet.contains(char)) {
-                tempStringSet.add(char)
-                stringBuilder.append(char)
-            } else {
-                tempStringSet.clear()
-                if (!uniqueStringSet.contains(stringBuilder.toString())) {
-                    uniqueStringSet.add(stringBuilder.toString())
-                    heap.add(stringBuilder.toString().length)
+        while (startIndex < stringLength && endIndex < stringLength) {
+            when (!uniqueCharSet.contains(solutionIn[endIndex])) {
+                true -> {
+                    uniqueCharSet.add(solutionIn[endIndex++])
+                    longestLength = if (endIndex - startIndex > longestLength) endIndex - startIndex else longestLength
                 }
-                stringBuilder = StringBuilder("$char")
-                tempStringSet.add(char)
+                false -> uniqueCharSet.remove(solutionIn[startIndex++])
             }
         }
-        return heap.poll()
+
+        return longestLength
     }
-
-}
-
-fun main() {
-    val solve = LongestSubstringWithoutRepeatingChars()
-    val p1 = "aab"
-    print(solve.firstAttempt(p1))
 }

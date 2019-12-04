@@ -22,9 +22,14 @@ public class App {
         printProblemSolved(app.getAppComponent().provideFizzBuzz().getName());
         printProblemSolved(app.getAppComponent().provideTwoSum().getName());
         printProblemSolved(app.getAppComponent().provideAddTwoNumbers().getName());
+        printProblemSolvedPendingTest(app.getAppComponent().provideLongestSubstringWithoutRepeatingCharacters().getName());
     }
 
     private static void printProblemSolved(String problemName) {
         System.out.println("Problem #" + problemCounter++ + " problem name: " + problemName + " completed.");
+    }
+
+    private static void printProblemSolvedPendingTest(String problemName) {
+        System.out.println("*NEED unit test* Problem #" + problemCounter++ + " problem name: " + problemName + " completed.");
     }
 }
