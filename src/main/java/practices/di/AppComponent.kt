@@ -5,6 +5,7 @@ import practices.questions.easy.FizzBuzz
 import practices.questions.easy.SplitStringToBalancedString
 import practices.questions.easy.TwoSum
 import practices.questions.medium.AddTwoNumbers
+import practices.questions.medium.CountingBits
 import practices.questions.medium.LongestSubstringWithoutRepeatingChars
 import javax.inject.Singleton
 
@@ -22,4 +23,5 @@ interface AppComponent {
 
     fun provideSplitStringToBalancedString() : SplitStringToBalancedString
 
+    fun provideCountingBits() : CountingBits
 }

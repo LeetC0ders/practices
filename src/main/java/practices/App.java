@@ -19,11 +19,14 @@ public class App {
     public static void main(String[] args) {
         App app = new App();
         System.out.println(app.getGreeting());
+
         printProblemSolved(app.getAppComponent().provideFizzBuzz().getName());
         printProblemSolved(app.getAppComponent().provideTwoSum().getName());
         printProblemSolved(app.getAppComponent().provideAddTwoNumbers().getName());
+
         printProblemSolvedPendingTest(app.getAppComponent().provideLongestSubstringWithoutRepeatingCharacters().getName());
         printProblemSolvedPendingTest(app.getAppComponent().provideSplitStringToBalancedString().getName());
+        printProblemSolvedPendingTest(app.getAppComponent().provideCountingBits().getName());
     }
 
     private static void printProblemSolved(String problemName) {
