@@ -23,6 +23,7 @@ public class App {
         printProblemSolved(app.getAppComponent().provideTwoSum().getName());
         printProblemSolved(app.getAppComponent().provideAddTwoNumbers().getName());
         printProblemSolvedPendingTest(app.getAppComponent().provideLongestSubstringWithoutRepeatingCharacters().getName());
+        printProblemSolvedPendingTest(app.getAppComponent().provideSplitStringToBalancedString().getName());
     }
 
     private static void printProblemSolved(String problemName) {

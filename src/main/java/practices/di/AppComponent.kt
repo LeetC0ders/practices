@@ -2,6 +2,7 @@ package practices.di
 
 import dagger.Component
 import practices.questions.easy.FizzBuzz
+import practices.questions.easy.SplitStringToBalancedString
 import practices.questions.easy.TwoSum
 import practices.questions.medium.AddTwoNumbers
 import practices.questions.medium.LongestSubstringWithoutRepeatingChars
@@ -18,5 +19,7 @@ interface AppComponent {
     fun provideAddTwoNumbers() : AddTwoNumbers
 
     fun provideLongestSubstringWithoutRepeatingCharacters() : LongestSubstringWithoutRepeatingChars
+
+    fun provideSplitStringToBalancedString() : SplitStringToBalancedString
 
 }

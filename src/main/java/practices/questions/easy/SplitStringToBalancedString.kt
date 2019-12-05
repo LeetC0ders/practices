@@ -2,14 +2,33 @@ package practices.questions.easy
 
 import practices.questions.EMPTY_SOLUTION_IN
 import practices.questions.Solution
+import javax.inject.Inject
+import javax.inject.Singleton
 
 /*
 * 1221-Split a String in Balanced Strings
 *
+* Question:
+* Balanced strings are those who have equal quantity of 'L' and 'R'
+* Given a balanced string s split it in the maximum amount of balanced strings.
+* Return the maximum amount of spitted balanced strings.
 *
+* Example:
 *
+* Input: s = "RLRRLLRLRL", Output: 4
+* Explanation: s can be split into "RL", "RRLL", "RL", "RL",
+* each substring contains same number of 'L' and 'R'.
+*
+* Input: s = "RLLLLRRRLR", Output: 3
+* Explanation: s can be split into "RL", "LLLRRR", "LR",
+* each substring contains same number of 'L' and 'R'.
+*
+* Input: s = "RLRRRLLRLL", Output: 2
+* Explanation: s can be split into "RL", "RRRLLRLL",
+* since each substring contains an equal number of 'L' and 'R'
 * */
-class SplitStringToBalancedString: Solution<String, Int> {
+@Singleton
+class SplitStringToBalancedString @Inject constructor(): Solution<String, Int> {
 
     override fun getName() = "SplitStringToBalancedString"
 
