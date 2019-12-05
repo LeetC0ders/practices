@@ -1,6 +1,7 @@
 package practices.di
 
 import dagger.Component
+import practices.questions.easy.FindAllNumberDisappearedInArr
 import practices.questions.easy.FizzBuzz
 import practices.questions.easy.SplitStringToBalancedString
 import practices.questions.easy.TwoSum
@@ -24,4 +25,6 @@ interface AppComponent {
     fun provideSplitStringToBalancedString() : SplitStringToBalancedString
 
     fun provideCountingBits() : CountingBits
+
+    fun provideFindAllNumbersDisappearedInArr() : FindAllNumberDisappearedInArr
 }
