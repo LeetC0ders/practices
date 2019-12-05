@@ -29,4 +29,6 @@ interface AppComponent {
     fun provideBinaryTreeLevelOrderTraversal() : BinaryTreeLevelOrderTraversal
 
     fun provideReverseLinkedList() : ReverseLinkedList
+
+    fun provideInvertBinaryTree() : InvertBinaryTree
 }

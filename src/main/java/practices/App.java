@@ -34,6 +34,7 @@ public class App {
         printProblemSolvedPendingTest(app.getAppComponent().provideFindAllNumbersDisappearedInArr().getName());
         printProblemSolvedPendingTest(app.getAppComponent().provideBinaryTreeLevelOrderTraversal().getName());
         printProblemSolvedPendingTest(app.getAppComponent().provideReverseLinkedList().getName());
+        printProblemSolvedPendingTest(app.getAppComponent().provideInvertBinaryTree().getName());
     }
 
     private static void printProblemSolved(String problemName) {
