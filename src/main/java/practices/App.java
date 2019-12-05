@@ -24,9 +24,12 @@ public class App {
         printProblemSolved(app.getAppComponent().provideTwoSum().getName());
         printProblemSolved(app.getAppComponent().provideAddTwoNumbers().getName());
 
+        System.out.println();
+
         printProblemSolvedPendingTest(app.getAppComponent().provideLongestSubstringWithoutRepeatingCharacters().getName());
         printProblemSolvedPendingTest(app.getAppComponent().provideSplitStringToBalancedString().getName());
         printProblemSolvedPendingTest(app.getAppComponent().provideCountingBits().getName());
+        printProblemSolvedPendingTest(app.getAppComponent().provideFindAllNumbersDisappearedInArr().getName());
     }
 
     private static void printProblemSolved(String problemName) {
