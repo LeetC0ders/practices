@@ -26,7 +26,7 @@ public class App {
 
         printProblemSolvedPendingTest(app.getAppComponent().provideLongestSubstringWithoutRepeatingCharacters().getName());
         printProblemSolvedPendingTest(app.getAppComponent().provideSplitStringToBalancedString().getName());
-        printProblemSolvedPendingTest(app.getAppComponent().provideCuntingBits().getName());
+        printProblemSolvedPendingTest(app.getAppComponent().provideCountingBits().getName());
     }
 
     private static void printProblemSolved(String problemName) {

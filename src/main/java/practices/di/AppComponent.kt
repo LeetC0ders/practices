@@ -23,5 +23,5 @@ interface AppComponent {
 
     fun provideSplitStringToBalancedString() : SplitStringToBalancedString
 
-    fun provideCuntingBits() : CountingBits
+    fun provideCountingBits() : CountingBits
 }
