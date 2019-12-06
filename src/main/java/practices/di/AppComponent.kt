@@ -31,4 +31,6 @@ interface AppComponent {
     fun provideReverseLinkedList() : ReverseLinkedList
 
     fun provideInvertBinaryTree() : InvertBinaryTree
+
+    fun provideValidParentheses() : ValidParentheses
 }
