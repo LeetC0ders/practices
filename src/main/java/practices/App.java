@@ -33,6 +33,7 @@ public class App {
         printProblemSolvedPendingTest(app.getAppComponent().provideCountingBits().getName());
         printProblemSolvedPendingTest(app.getAppComponent().provideFindAllNumbersDisappearedInArr().getName());
         printProblemSolvedPendingTest(app.getAppComponent().provideBinaryTreeLevelOrderTraversal().getName());
+        printProblemSolvedPendingTest(app.getAppComponent().provideReverseLinkedList().getName());
     }
 
     private static void printProblemSolved(String problemName) {
