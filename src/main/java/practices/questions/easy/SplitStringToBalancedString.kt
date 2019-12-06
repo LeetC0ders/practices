@@ -65,8 +65,3 @@ class SplitStringToBalancedString @Inject constructor(): Solution<String, Int> {
         return counter
     }
 }
-
-fun main() {
-    val s = SplitStringToBalancedString()
-    print(s.firstAttempt("RLRRRLLRLL"))
-}
