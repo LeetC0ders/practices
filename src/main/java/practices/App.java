@@ -35,6 +35,7 @@ public class App {
         printProblemSolvedPendingTest(app.getAppComponent().provideBinaryTreeLevelOrderTraversal().getName());
         printProblemSolvedPendingTest(app.getAppComponent().provideReverseLinkedList().getName());
         printProblemSolvedPendingTest(app.getAppComponent().provideInvertBinaryTree().getName());
+        printProblemSolvedPendingTest(app.getAppComponent().provideValidParentheses().getName());
     }
 
     private static void printProblemSolved(String problemName) {
