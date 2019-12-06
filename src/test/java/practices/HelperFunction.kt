@@ -1,7 +1,6 @@
 package practices
 
 import practices.datastructure.SinglyLinkedList
-import java.lang.StringBuilder
 
 /**
  * @param = IntArray

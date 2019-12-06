@@ -12,7 +12,7 @@ import practices.questions.medium.LongestSubstringWithoutRepeatingChars
 import javax.inject.Singleton
 
 @Singleton
-@Component
+@Component(dependencies = [DataStructureComponent::class])
 interface AppComponent {
 
     fun provideFizzBuzz() : FizzBuzz

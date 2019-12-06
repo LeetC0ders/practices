@@ -5,11 +5,13 @@ package practices;
 
 import practices.di.AppComponent;
 import practices.di.DaggerAppComponent;
+import practices.di.DaggerDataStructureComponent;
 
 public class App {
 
     private static int problemCounter = 0;
-    private AppComponent appComponent = DaggerAppComponent.create();
+    private AppComponent appComponent = DaggerAppComponent.builder().dataStructureComponent(
+            DaggerDataStructureComponent.create()).build();
 
     public String getGreeting() {
         return "Hello, welcome to LeetCode practice";

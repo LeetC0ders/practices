@@ -1,9 +1,10 @@
 package practices.questionstest.easytest
 
-import org.junit.Assert.assertEquals
 import org.junit.After
+import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
+import practices.di.DaggerDataStructureComponent
 import practices.di.DaggerTestAppComponent
 import practices.intArrayToString
 import practices.questions.easy.TwoSum
@@ -14,7 +15,8 @@ class TwoSumTest {
 
     @Before
     fun setUp() {
-        twoSum = DaggerTestAppComponent.create().provideTwoSum()
+        twoSum = DaggerTestAppComponent.builder().dataStructureComponent(DaggerDataStructureComponent.create())
+                .build().provideTwoSum()
     }
 
     @Test
