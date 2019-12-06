@@ -30,6 +30,7 @@ public class App {
         printProblemSolvedPendingTest(app.getAppComponent().provideSplitStringToBalancedString().getName());
         printProblemSolvedPendingTest(app.getAppComponent().provideCountingBits().getName());
         printProblemSolvedPendingTest(app.getAppComponent().provideFindAllNumbersDisappearedInArr().getName());
+        printProblemSolvedPendingTest(app.getAppComponent().provideBinaryTreeLevelOrderTraversal().getName());
     }
 
     private static void printProblemSolved(String problemName) {
