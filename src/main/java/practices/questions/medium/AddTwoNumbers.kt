@@ -2,10 +2,8 @@ package practices.questions.medium
 
 import practices.datastructure.SinglyLinkedList
 import practices.datastructure.SinglyLinkedList.ListNode
-import practices.di.DaggerDataStructureComponent
 import practices.questions.EMPTY_SOLUTION_IN
 import practices.questions.Solution
-import java.lang.Exception
 import java.util.*
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -29,13 +27,7 @@ import javax.inject.Singleton
 *  - The output is = (7 -> 0 -> 8)   // which is 807 = 342 + 456
 * */
 @Singleton
-class AddTwoNumbers @Inject constructor() : Solution<Pair<ListNode, ListNode>, ListNode> {
-
-    @Inject lateinit var singlyLinkedList: SinglyLinkedList
-
-    init {
-        DaggerDataStructureComponent.create().inject(this)
-    }
+class AddTwoNumbers @Inject constructor(var singlyLinkedList: SinglyLinkedList) : Solution<Pair<ListNode, ListNode>, ListNode> {
 
     override fun getName() = "AddTwoNumbers"
 

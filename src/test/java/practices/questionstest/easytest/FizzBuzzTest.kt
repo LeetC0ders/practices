@@ -1,15 +1,14 @@
 package practices.questionstest.easytest
 
 import org.junit.After
-import org.junit.Test
-
-import org.junit.Assert.*
+import org.junit.Assert.assertEquals
 import org.junit.Before
+import org.junit.Test
+import practices.di.DaggerDataStructureComponent
 import practices.di.DaggerTestAppComponent
 import practices.questions.easy.FizzBuzz
 import java.io.ByteArrayOutputStream
 import java.io.PrintStream
-import java.lang.Exception
 
 class FizzBuzzTest {
 
@@ -24,7 +23,8 @@ class FizzBuzzTest {
     fun setup() {
         System.setOut(PrintStream(outContent))
         System.setErr(PrintStream(errContent))
-        fizzBuzz = DaggerTestAppComponent.builder().build().provideFizzBuzz()
+        fizzBuzz = DaggerTestAppComponent.builder().dataStructureComponent(DaggerDataStructureComponent.create())
+                .build().provideFizzBuzz()
     }
 
     @Test

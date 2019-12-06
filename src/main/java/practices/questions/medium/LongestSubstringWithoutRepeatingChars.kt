@@ -4,7 +4,6 @@ import practices.questions.EMPTY_SOLUTION_IN
 import practices.questions.Solution
 import javax.inject.Inject
 import javax.inject.Singleton
-import kotlin.collections.HashSet
 
 /*
 * 003-LongestSubstringWithoutRepeatingCharacters

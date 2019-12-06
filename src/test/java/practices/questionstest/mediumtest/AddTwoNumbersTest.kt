@@ -1,11 +1,12 @@
 package practices.questionstest.mediumtest
 
 import org.junit.After
-import org.junit.Assert.*
+import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
 import practices.datastructure.SinglyLinkedList
 import practices.datastructure.SinglyLinkedList.ListNode
+import practices.di.DaggerDataStructureComponent
 import practices.di.DaggerTestAppComponent
 import practices.questions.medium.AddTwoNumbers
 import practices.singlyLinkedListToString
@@ -16,7 +17,8 @@ class AddTwoNumbersTest {
 
     @Before
     fun setUp() {
-        addTwoNumbers = DaggerTestAppComponent.create().provideAddTwoNumbers()
+        addTwoNumbers = DaggerTestAppComponent.builder().dataStructureComponent(DaggerDataStructureComponent.create())
+                .build().provideAddTwoNumbers()
     }
 
     @Test

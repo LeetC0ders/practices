@@ -1,11 +1,12 @@
 package practices.di
 
 import dagger.Component
-import practices.questions.medium.AddTwoNumbers
+import practices.datastructure.SinglyLinkedList
+import practices.di.modules.DataStructureModule
 
-@Component
+@Component(modules = [DataStructureModule::class])
 interface DataStructureComponent {
 
-    fun inject(addTwoNumbers: AddTwoNumbers)
+    fun provideSinglyLinkedList(): SinglyLinkedList
 
 }

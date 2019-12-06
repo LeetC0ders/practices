@@ -5,7 +5,6 @@ import org.junit.Before
 import org.junit.Test
 import practices.datastructure.SinglyLinkedList
 import practices.datastructure.SinglyLinkedList.ListNode
-import practices.intArrayToString
 import practices.singlyLinkedListToString
 
 class SinglyLinkedListToStringTest {
