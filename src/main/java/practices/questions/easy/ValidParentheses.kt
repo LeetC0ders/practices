@@ -1,5 +1,6 @@
 package practices.questions.easy
 
+import practices.questions.EMPTY_SOLUTION_IN
 import practices.questions.Solution
 import java.util.*
 import javax.inject.Inject
@@ -23,7 +24,10 @@ class ValidParentheses @Inject constructor() : Solution<String, Boolean> {
     override fun getName() = "ValidParentheses"
 
     override fun solve(solutionIn: String?): Boolean {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        solutionIn?.let {
+            firstAttempt(it)
+        }
+        throw Exception(EMPTY_SOLUTION_IN)
     }
 
     /*
