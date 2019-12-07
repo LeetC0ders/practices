@@ -33,4 +33,6 @@ interface AppComponent {
     fun provideInvertBinaryTree() : InvertBinaryTree
 
     fun provideValidParentheses() : ValidParentheses
+
+    fun provideMergeTwoSortedList() : MergeTwoSortedList
 }

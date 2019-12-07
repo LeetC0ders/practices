@@ -36,6 +36,7 @@ public class App {
         printProblemSolvedPendingTest(app.getAppComponent().provideReverseLinkedList().getName());
         printProblemSolvedPendingTest(app.getAppComponent().provideInvertBinaryTree().getName());
         printProblemSolvedPendingTest(app.getAppComponent().provideValidParentheses().getName());
+        printProblemSolvedPendingTest(app.getAppComponent().provideMergeTwoSortedList().getName());
     }
 
     private static void printProblemSolved(String problemName) {
