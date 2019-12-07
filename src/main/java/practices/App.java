@@ -38,6 +38,7 @@ public class App {
         printProblemSolvedPendingTest(app.getAppComponent().provideValidParentheses().getName());
         printProblemSolvedPendingTest(app.getAppComponent().provideMergeTwoSortedList().getName());
         printProblemSolvedPendingTest(app.getAppComponent().provideMaximumSizeSubarraySumEqualsK().getName());
+        printProblemSolvedPendingTest(app.getAppComponent().provideBestTimeToBuyAndSellStock().getName());
     }
 
     private static void printProblemSolved(String problemName) {
