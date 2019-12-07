@@ -38,4 +38,6 @@ interface AppComponent {
     fun provideMergeTwoSortedList() : MergeTwoSortedList
 
     fun provideMaximumSizeSubarraySumEqualsK(): MaximumSizeSubArraySumEqualsK
+
+    fun provideBestTimeToBuyAndSellStock(): BestTimeToBuyAndSellStock
 }
