@@ -37,6 +37,7 @@ public class App {
         printProblemSolvedPendingTest(app.getAppComponent().provideInvertBinaryTree().getName());
         printProblemSolvedPendingTest(app.getAppComponent().provideValidParentheses().getName());
         printProblemSolvedPendingTest(app.getAppComponent().provideMergeTwoSortedList().getName());
+        printProblemSolvedPendingTest(app.getAppComponent().provideMaximumSizeSubarraySumEqualsK().getName());
     }
 
     private static void printProblemSolved(String problemName) {

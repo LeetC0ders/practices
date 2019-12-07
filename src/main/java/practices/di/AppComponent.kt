@@ -6,6 +6,7 @@ import practices.questions.medium.AddTwoNumbers
 import practices.questions.medium.BinaryTreeLevelOrderTraversal
 import practices.questions.medium.CountingBits
 import practices.questions.medium.LongestSubstringWithoutRepeatingChars
+import practices.questions.medium.MaximumSizeSubArraySumEqualsK
 import javax.inject.Singleton
 
 @Singleton
@@ -35,4 +36,6 @@ interface AppComponent {
     fun provideValidParentheses() : ValidParentheses
 
     fun provideMergeTwoSortedList() : MergeTwoSortedList
+
+    fun provideMaximumSizeSubarraySumEqualsK(): MaximumSizeSubArraySumEqualsK
 }
