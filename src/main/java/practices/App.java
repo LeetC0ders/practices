@@ -39,6 +39,7 @@ public class App {
         printProblemSolvedPendingTest(app.getAppComponent().provideMergeTwoSortedList().getName());
         printProblemSolvedPendingTest(app.getAppComponent().provideMaximumSizeSubarraySumEqualsK().getName());
         printProblemSolvedPendingTest(app.getAppComponent().provideBestTimeToBuyAndSellStock().getName());
+        printProblemSolvedPendingTest(app.getAppComponent().provideVerifyingAnAlienDictionary().getName());
     }
 
     private static void printProblemSolved(String problemName) {
