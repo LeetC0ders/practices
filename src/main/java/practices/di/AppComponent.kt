@@ -40,4 +40,6 @@ interface AppComponent {
     fun provideMaximumSizeSubarraySumEqualsK(): MaximumSizeSubArraySumEqualsK
 
     fun provideBestTimeToBuyAndSellStock(): BestTimeToBuyAndSellStock
+
+    fun provideVerifyingAnAlienDictionary(): VerifyingAnAlienDictionary
 }
