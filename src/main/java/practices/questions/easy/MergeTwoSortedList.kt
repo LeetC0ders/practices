@@ -24,6 +24,7 @@ class MergeTwoSortedList @Inject constructor() : Solution<Pair<SinglyLinkedList.
     // input & output both can be nullable
     override fun solve(solutionIn: Pair<SinglyLinkedList.ListNode?, SinglyLinkedList.ListNode?>?): SinglyLinkedList.ListNode? {
         solutionIn?.let { return firstAttempt(it) }
+        solutionIn?.let { return secondAttempt(it) }
         throw Exception(EMPTY_SOLUTION_IN)
     }
 
@@ -76,6 +77,48 @@ class MergeTwoSortedList @Inject constructor() : Solution<Pair<SinglyLinkedList.
             }
         }
     }
+
+    /*
+    * Runtime: 152 ms, faster than 92.31% of Kotlin online submissions for Merge Two Sorted Lists.
+    * Memory Usage: 33 MB, less than 100.00% of Kotlin online submissions for Merge Two Sorted Lists.
+    * */
+    fun secondAttempt(solutionIn: Pair<SinglyLinkedList.ListNode?, SinglyLinkedList.ListNode?>): SinglyLinkedList.ListNode? {
+
+        val firstListNode = solutionIn.first
+        val secondListNode = solutionIn.second
+        var expansionListNode = SinglyLinkedList.ListNode(-1)
+        val expansionNodeRef = expansionListNode
+
+        fun recursiveHelperFunction(listOneNode: SinglyLinkedList.ListNode?, listTwoNode: SinglyLinkedList.ListNode?, expansionListNode: SinglyLinkedList.ListNode?) {
+            when {
+                listOneNode == null && listTwoNode == null -> {
+                    return
+                }
+                listOneNode != null && listTwoNode == null -> {
+                    expansionListNode?.next = SinglyLinkedList.ListNode(listOneNode.nodeValue)
+                    recursiveHelperFunction(listOneNode.next, listTwoNode, expansionListNode?.next)
+                }
+                listOneNode == null && listTwoNode != null -> {
+                    expansionListNode?.next = SinglyLinkedList.ListNode(listTwoNode.nodeValue)
+                    recursiveHelperFunction(listOneNode, listTwoNode.next, expansionListNode?.next)
+                }
+                listOneNode!!.nodeValue > listTwoNode!!.nodeValue -> {
+                    expansionListNode?.next = SinglyLinkedList.ListNode(listTwoNode.nodeValue)
+                    recursiveHelperFunction(listOneNode, listTwoNode.next, expansionListNode?.next)
+                }
+                listOneNode.nodeValue < listTwoNode.nodeValue -> {
+                    expansionListNode?.next = SinglyLinkedList.ListNode(listOneNode.nodeValue)
+                    recursiveHelperFunction(listOneNode.next, listTwoNode, expansionListNode?.next)
+                }
+                listOneNode.nodeValue == listTwoNode.nodeValue -> {
+                    expansionListNode?.next = SinglyLinkedList.ListNode(listOneNode.nodeValue)
+                    recursiveHelperFunction(listOneNode, listTwoNode.next, expansionListNode?.next)
+                }
+            }
+        }
+        recursiveHelperFunction(firstListNode, secondListNode, expansionListNode)
+        return expansionNodeRef.next
+    }
 }
 
 //TODO: Use this for Unit test
@@ -103,10 +146,14 @@ class MergeTwoSortedList @Inject constructor() : Solution<Pair<SinglyLinkedList.
 //    println()
 //    listIterator(expendingListNodeHead2)
 //    println()
-//    val result = MergeTwoSortedList().firstAttempt(Pair(expendingListNodeHead, expendingListNodeHead2))
-//    val result2 = MergeTwoSortedList().firstAttempt(Pair(null, null))
-//    val result3 = MergeTwoSortedList().firstAttempt(Pair(null, expendingListNodeHead))
-//    val result4 = MergeTwoSortedList().firstAttempt(Pair(expendingListNodeHead, null))
+////    val result = MergeTwoSortedList().firstAttempt(Pair(expendingListNodeHead, expendingListNodeHead2))
+//    val result = MergeTwoSortedList().secondAttempt(Pair(expendingListNodeHead, expendingListNodeHead2))
+////    val result2 = MergeTwoSortedList().firstAttempt(Pair(null, null))
+//    val result2 = MergeTwoSortedList().secondAttempt(Pair(null, null))
+////    val result3 = MergeTwoSortedList().firstAttempt(Pair(null, expendingListNodeHead))
+//    val result3 = MergeTwoSortedList().secondAttempt(Pair(null, expendingListNodeHead))
+////    val result4 = MergeTwoSortedList().firstAttempt(Pair(expendingListNodeHead, null))
+//    val result4 = MergeTwoSortedList().secondAttempt(Pair(expendingListNodeHead, null))
 //
 //    listIterator(result)
 //    println()
