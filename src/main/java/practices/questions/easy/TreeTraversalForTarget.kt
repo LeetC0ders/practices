@@ -37,15 +37,15 @@ class TreeTraversalForTarget : Solution<Pair<Tree.TreeNode?, Int>, Boolean> {
     }
 }
 
-fun main() {
-    val sampleTree = Tree.TreeNode(4).apply {
-        leftNode = Tree.TreeNode(2)
-        rightNode = Tree.TreeNode(7)
-        leftNode?.leftNode = Tree.TreeNode(1)
-        leftNode?.rightNode = Tree.TreeNode(3)
-        rightNode?.leftNode = Tree.TreeNode(6)
-        rightNode?.rightNode = Tree.TreeNode(9)
-    }
-
-    println(TreeTraversalForTarget().firstAttempt(Pair(sampleTree, 16)))
-}
+//fun main() {
+//    val sampleTree = Tree.TreeNode(4).apply {
+//        leftNode = Tree.TreeNode(2)
+//        rightNode = Tree.TreeNode(7)
+//        leftNode?.leftNode = Tree.TreeNode(1)
+//        leftNode?.rightNode = Tree.TreeNode(3)
+//        rightNode?.leftNode = Tree.TreeNode(6)
+//        rightNode?.rightNode = Tree.TreeNode(9)
+//    }
+//
+//    println(TreeTraversalForTarget().firstAttempt(Pair(sampleTree, 16)))
+//}
