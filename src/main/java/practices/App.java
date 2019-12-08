@@ -5,11 +5,13 @@ package practices;
 
 import practices.di.AppComponent;
 import practices.di.DaggerAppComponent;
+import practices.di.DaggerDataStructureComponent;
 
 public class App {
 
     private static int problemCounter = 0;
-    private AppComponent appComponent = DaggerAppComponent.create();
+    private AppComponent appComponent = DaggerAppComponent.builder().dataStructureComponent(
+            DaggerDataStructureComponent.create()).build();
 
     public String getGreeting() {
         return "Hello, welcome to LeetCode practice";
@@ -19,12 +21,32 @@ public class App {
     public static void main(String[] args) {
         App app = new App();
         System.out.println(app.getGreeting());
+
         printProblemSolved(app.getAppComponent().provideFizzBuzz().getName());
         printProblemSolved(app.getAppComponent().provideTwoSum().getName());
         printProblemSolved(app.getAppComponent().provideAddTwoNumbers().getName());
+
+        System.out.println();
+
+        printProblemSolvedPendingTest(app.getAppComponent().provideLongestSubstringWithoutRepeatingCharacters().getName());
+        printProblemSolvedPendingTest(app.getAppComponent().provideSplitStringToBalancedString().getName());
+        printProblemSolvedPendingTest(app.getAppComponent().provideCountingBits().getName());
+        printProblemSolvedPendingTest(app.getAppComponent().provideFindAllNumbersDisappearedInArr().getName());
+        printProblemSolvedPendingTest(app.getAppComponent().provideBinaryTreeLevelOrderTraversal().getName());
+        printProblemSolvedPendingTest(app.getAppComponent().provideReverseLinkedList().getName());
+        printProblemSolvedPendingTest(app.getAppComponent().provideInvertBinaryTree().getName());
+        printProblemSolvedPendingTest(app.getAppComponent().provideValidParentheses().getName());
+        printProblemSolvedPendingTest(app.getAppComponent().provideMergeTwoSortedList().getName());
+        printProblemSolvedPendingTest(app.getAppComponent().provideMaximumSizeSubarraySumEqualsK().getName());
+        printProblemSolvedPendingTest(app.getAppComponent().provideBestTimeToBuyAndSellStock().getName());
+        printProblemSolvedPendingTest(app.getAppComponent().provideVerifyingAnAlienDictionary().getName());
     }
 
     private static void printProblemSolved(String problemName) {
         System.out.println("Problem #" + problemCounter++ + " problem name: " + problemName + " completed.");
+    }
+
+    private static void printProblemSolvedPendingTest(String problemName) {
+        System.out.println("*NEED unit test* Problem #" + problemCounter++ + " problem name: " + problemName + " completed.");
     }
 }

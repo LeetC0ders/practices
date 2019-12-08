@@ -7,7 +7,7 @@ import practices.questions.medium.AddTwoNumbers
 import javax.inject.Singleton
 
 @Singleton
-@Component
+@Component(dependencies = [DataStructureComponent::class])
 interface TestAppComponent {
 
     fun provideFizzBuzz(): FizzBuzz
