@@ -5,6 +5,7 @@ import practices.questions.easy.*
 import practices.questions.medium.AddTwoNumbers
 import practices.questions.medium.BinaryTreeLevelOrderTraversal
 import practices.questions.medium.CountingBits
+import practices.questions.medium.LongestPalindromicSubString
 import practices.questions.medium.LongestSubstringWithoutRepeatingChars
 import practices.questions.medium.MaximumSizeSubArraySumEqualsK
 import javax.inject.Singleton
@@ -42,4 +43,6 @@ interface AppComponent {
     fun provideBestTimeToBuyAndSellStock(): BestTimeToBuyAndSellStock
 
     fun provideVerifyingAnAlienDictionary(): VerifyingAnAlienDictionary
+
+    fun provideLongestPalindromicSubString(): LongestPalindromicSubString
 }
