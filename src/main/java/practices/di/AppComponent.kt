@@ -42,4 +42,6 @@ interface AppComponent {
     fun provideBestTimeToBuyAndSellStock(): BestTimeToBuyAndSellStock
 
     fun provideVerifyingAnAlienDictionary(): VerifyingAnAlienDictionary
+
+    fun provideMergeSortedArray(): MergeSortedArray
 }

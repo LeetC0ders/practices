@@ -40,6 +40,7 @@ public class App {
         printProblemSolvedPendingTest(app.getAppComponent().provideMaximumSizeSubarraySumEqualsK().getName());
         printProblemSolvedPendingTest(app.getAppComponent().provideBestTimeToBuyAndSellStock().getName());
         printProblemSolvedPendingTest(app.getAppComponent().provideVerifyingAnAlienDictionary().getName());
+        printProblemSolvedPendingTest(app.getAppComponent().provideMergeSortedArray().getName());
     }
 
     private static void printProblemSolved(String problemName) {
