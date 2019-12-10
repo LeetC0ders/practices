@@ -2,9 +2,12 @@ package practices.questions.easy
 
 import practices.questions.EMPTY_SOLUTION_IN
 import practices.questions.Solution
+import javax.inject.Inject
+import javax.inject.Singleton
 
 //In place selection sort
-class SelectionSort: Solution<IntArray, Unit> {
+@Singleton
+class SelectionSort @Inject constructor(): Solution<IntArray, Unit> {
 
     override fun getName() = "SelectionSort"
 

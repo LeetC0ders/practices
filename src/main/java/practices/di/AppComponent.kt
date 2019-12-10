@@ -13,6 +13,7 @@ import javax.inject.Singleton
 @Component(dependencies = [DataStructureComponent::class])
 interface AppComponent {
 
+    // LeetCode questions
     fun provideFizzBuzz() : FizzBuzz
 
     fun provideTwoSum() : TwoSum
@@ -46,4 +47,7 @@ interface AppComponent {
     fun provideMergeSortedArray(): MergeSortedArray
 
     fun provideAddStrings(): AddStrings
+
+    // Algorithms
+    fun provideSelectionSort(): SelectionSort
 }
