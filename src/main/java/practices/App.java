@@ -50,6 +50,7 @@ public class App {
         System.out.println();
 
         printAlgoSolvedPendingTest(app.getAppComponent().provideSelectionSort().getName());
+        printAlgoSolvedPendingTest(app.getAppComponent().provideBubbleSort().getName());
     }
 
     private static void printAlgoSolved(String algoName) {

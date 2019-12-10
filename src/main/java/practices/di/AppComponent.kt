@@ -1,6 +1,7 @@
 package practices.di
 
 import dagger.Component
+import practices.questions.algo.BubbleSort
 import practices.questions.algo.SelectionSort
 import practices.questions.easy.*
 import practices.questions.medium.AddTwoNumbers
@@ -51,4 +52,6 @@ interface AppComponent {
 
     // Algorithms
     fun provideSelectionSort(): SelectionSort
+
+    fun provideBubbleSort(): BubbleSort
 }
