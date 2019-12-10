@@ -44,4 +44,6 @@ interface AppComponent {
     fun provideVerifyingAnAlienDictionary(): VerifyingAnAlienDictionary
 
     fun provideMergeSortedArray(): MergeSortedArray
+
+    fun provideAddStrings(): AddStrings
 }

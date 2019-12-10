@@ -41,6 +41,7 @@ public class App {
         printProblemSolvedPendingTest(app.getAppComponent().provideBestTimeToBuyAndSellStock().getName());
         printProblemSolvedPendingTest(app.getAppComponent().provideVerifyingAnAlienDictionary().getName());
         printProblemSolvedPendingTest(app.getAppComponent().provideMergeSortedArray().getName());
+        printProblemSolvedPendingTest(app.getAppComponent().provideAddStrings().getName());
     }
 
     private static void printProblemSolved(String problemName) {
