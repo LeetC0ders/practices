@@ -10,6 +10,8 @@ import practices.di.DaggerDataStructureComponent;
 public class App {
 
     private static int problemCounter = 0;
+    private static int algoCounter = 0;
+
     private AppComponent appComponent = DaggerAppComponent.builder().dataStructureComponent(
             DaggerDataStructureComponent.create()).build();
 
@@ -20,7 +22,9 @@ public class App {
 
     public static void main(String[] args) {
         App app = new App();
+
         System.out.println(app.getGreeting());
+        System.out.println();
 
         printProblemSolved(app.getAppComponent().provideFizzBuzz().getName());
         printProblemSolved(app.getAppComponent().provideTwoSum().getName());
@@ -42,6 +46,14 @@ public class App {
         printProblemSolvedPendingTest(app.getAppComponent().provideVerifyingAnAlienDictionary().getName());
         printProblemSolvedPendingTest(app.getAppComponent().provideMergeSortedArray().getName());
         printProblemSolvedPendingTest(app.getAppComponent().provideAddStrings().getName());
+
+        System.out.println();
+
+        printAlgoSolvedPendingTest(app.getAppComponent().provideSelectionSort().getName());
+    }
+
+    private static void printAlgoSolved(String algoName) {
+        System.out.println("Algo #" + algoCounter++ + " algo name: " + algoName + " completed.");
     }
 
     private static void printProblemSolved(String problemName) {
@@ -50,5 +62,9 @@ public class App {
 
     private static void printProblemSolvedPendingTest(String problemName) {
         System.out.println("*NEED unit test* Problem #" + problemCounter++ + " problem name: " + problemName + " completed.");
+    }
+
+    private static void printAlgoSolvedPendingTest(String algoName) {
+        System.out.println("*NEED unit test* Algo #" + algoCounter++ + " algo name: " + algoName + " completed.");
     }
 }
