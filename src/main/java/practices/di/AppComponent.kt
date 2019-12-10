@@ -1,6 +1,7 @@
 package practices.di
 
 import dagger.Component
+import practices.questions.algo.SelectionSort
 import practices.questions.easy.*
 import practices.questions.medium.AddTwoNumbers
 import practices.questions.medium.BinaryTreeLevelOrderTraversal

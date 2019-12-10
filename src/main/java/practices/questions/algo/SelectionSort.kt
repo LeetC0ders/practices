@@ -1,4 +1,4 @@
-package practices.questions.easy
+package practices.questions.algo
 
 import practices.questions.EMPTY_SOLUTION_IN
 import practices.questions.Solution
