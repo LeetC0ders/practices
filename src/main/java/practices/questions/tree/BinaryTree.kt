@@ -110,6 +110,12 @@ fun main() {
     println()
     tree.breadthFirstTraversalPrint()
     println()
+    /*
+    * Default Comparator impl:
+    * -1 : o1 < o2
+    * 0 : o1 == o2
+    * +1 : o1 > o2
+    * */
     val priorityQueue: PriorityQueue<Int> = PriorityQueue(2, Comparator<Int> { o1, o2 ->
         when {
             o1 < o2 -> 1
