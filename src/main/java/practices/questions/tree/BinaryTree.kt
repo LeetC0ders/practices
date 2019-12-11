@@ -1,6 +1,7 @@
 package practices.questions.tree
 
 import java.util.*
+import kotlin.Comparator
 
 // Create a BST with insert and delete
 class BinaryTree {
@@ -108,4 +109,17 @@ fun main() {
     print("${tree.rootNode.right!!.right?.content}!")
     println()
     tree.breadthFirstTraversalPrint()
+    println()
+    val priorityQueue: PriorityQueue<Int> = PriorityQueue(2, Comparator<Int> { o1, o2 ->
+        when {
+            o1 < o2 -> 1
+            o1 == o2 -> 0
+            else -> -1
+        }
+    })
+    intArrayOf(1,3,4,5,6,7,2).forEach {
+        priorityQueue.add(it)
+    }
+    println(priorityQueue.poll())
+    println(priorityQueue.poll())
 }
