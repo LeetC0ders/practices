@@ -1,6 +1,8 @@
 package practices.questions.easy
 
 import practices.datastructure.Tree
+import practices.di.DaggerAppComponent
+import practices.di.DaggerDataStructureComponent
 import practices.questions.EMPTY_SOLUTION_IN
 import practices.questions.Solution
 import javax.inject.Inject
@@ -56,7 +58,7 @@ class InvertBinaryTree @Inject constructor(): Solution<Tree.TreeNode, Tree.TreeN
     }
 }
 
-//TODO: Use this sample for UnitTest base case
+////TODO: Use this sample for UnitTest base case
 //fun main() {
 //
 //    val binaryTreeLevelOrderTraversal = DaggerAppComponent.builder()
@@ -70,6 +72,18 @@ class InvertBinaryTree @Inject constructor(): Solution<Tree.TreeNode, Tree.TreeN
 //        rightNode?.leftNode = Tree.TreeNode(6)
 //        rightNode?.rightNode = Tree.TreeNode(9)
 //    }
+//
+//    val sampleTree2 = Tree.TreeNode(4).apply {
+//        leftNode = Tree.TreeNode(2)
+//        rightNode = Tree.TreeNode(7)
+//        leftNode?.leftNode = Tree.TreeNode(1)
+//        leftNode?.rightNode = Tree.TreeNode(3)
+//        rightNode?.leftNode = Tree.TreeNode(6)
+//        rightNode?.rightNode = Tree.TreeNode(9)
+//    }
+//
+//    println("hashcode --> ${sampleTree.hashCode()}")
+//    println("hashcode --> ${sampleTree2.hashCode()}")
 //
 //    binaryTreeLevelOrderTraversal.firstAttempt(root = sampleTree).forEach {
 //        print("$it, ")
