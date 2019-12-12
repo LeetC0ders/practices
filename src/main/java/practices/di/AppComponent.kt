@@ -9,6 +9,7 @@ import practices.questions.medium.BinaryTreeLevelOrderTraversal
 import practices.questions.medium.CountingBits
 import practices.questions.medium.LongestSubstringWithoutRepeatingChars
 import practices.questions.medium.MaximumSizeSubArraySumEqualsK
+import practices.questions.medium.TopKFrequentElements
 import javax.inject.Singleton
 
 @Singleton
@@ -49,6 +50,8 @@ interface AppComponent {
     fun provideMergeSortedArray(): MergeSortedArray
 
     fun provideAddStrings(): AddStrings
+
+    fun provideTopKFrequentElements(): TopKFrequentElements
 
     // Algorithms
     fun provideSelectionSort(): SelectionSort
