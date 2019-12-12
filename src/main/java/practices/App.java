@@ -46,6 +46,7 @@ public class App {
         printProblemSolvedPendingTest(app.getAppComponent().provideVerifyingAnAlienDictionary().getName());
         printProblemSolvedPendingTest(app.getAppComponent().provideMergeSortedArray().getName());
         printProblemSolvedPendingTest(app.getAppComponent().provideAddStrings().getName());
+        printProblemSolvedPendingTest(app.getAppComponent().provideTopKFrequentElements().getName());
 
         System.out.println();
 
