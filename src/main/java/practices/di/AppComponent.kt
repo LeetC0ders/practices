@@ -4,12 +4,7 @@ import dagger.Component
 import practices.questions.algo.BubbleSort
 import practices.questions.algo.SelectionSort
 import practices.questions.easy.*
-import practices.questions.medium.AddTwoNumbers
-import practices.questions.medium.BinaryTreeLevelOrderTraversal
-import practices.questions.medium.CountingBits
-import practices.questions.medium.LongestSubstringWithoutRepeatingChars
-import practices.questions.medium.MaximumSizeSubArraySumEqualsK
-import practices.questions.medium.TopKFrequentElements
+import practices.questions.medium.*
 import javax.inject.Singleton
 
 @Singleton
@@ -52,6 +47,8 @@ interface AppComponent {
     fun provideAddStrings(): AddStrings
 
     fun provideTopKFrequentElements(): TopKFrequentElements
+
+    fun provideKthLargestNumber(): KthLargestNumber
 
     // Algorithms
     fun provideSelectionSort(): SelectionSort

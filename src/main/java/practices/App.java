@@ -47,6 +47,7 @@ public class App {
         printProblemSolvedPendingTest(app.getAppComponent().provideMergeSortedArray().getName());
         printProblemSolvedPendingTest(app.getAppComponent().provideAddStrings().getName());
         printProblemSolvedPendingTest(app.getAppComponent().provideTopKFrequentElements().getName());
+        printProblemSolvedPendingTest(app.getAppComponent().provideKthLargestNumber().getName());
 
         System.out.println();
 
