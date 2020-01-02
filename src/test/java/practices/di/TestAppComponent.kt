@@ -1,6 +1,7 @@
 package practices.di
 
 import dagger.Component
+import practices.questions.easy.FindAllNumberDisappearedInArr
 import practices.questions.easy.FizzBuzz
 import practices.questions.easy.TwoSum
 import practices.questions.medium.AddTwoNumbers
@@ -18,5 +19,7 @@ interface TestAppComponent {
     fun provideAddTwoNumbers(): AddTwoNumbers
 
     fun provideCountingBits(): CountingBits
+
+    fun provideFindAllNumberDisappearedInArr(): FindAllNumberDisappearedInArr
 
 }
