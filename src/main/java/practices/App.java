@@ -29,12 +29,12 @@ public class App {
         printProblemSolved(app.getAppComponent().provideFizzBuzz().getName());
         printProblemSolved(app.getAppComponent().provideTwoSum().getName());
         printProblemSolved(app.getAppComponent().provideAddTwoNumbers().getName());
+        printProblemSolved(app.getAppComponent().provideCountingBits().getName());
 
         System.out.println();
 
         printProblemSolvedPendingTest(app.getAppComponent().provideLongestSubstringWithoutRepeatingCharacters().getName());
         printProblemSolvedPendingTest(app.getAppComponent().provideSplitStringToBalancedString().getName());
-        printProblemSolvedPendingTest(app.getAppComponent().provideCountingBits().getName());
         printProblemSolvedPendingTest(app.getAppComponent().provideFindAllNumbersDisappearedInArr().getName());
         printProblemSolvedPendingTest(app.getAppComponent().provideBinaryTreeLevelOrderTraversal().getName());
         printProblemSolvedPendingTest(app.getAppComponent().provideReverseLinkedList().getName());
