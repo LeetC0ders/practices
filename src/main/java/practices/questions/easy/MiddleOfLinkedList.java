@@ -1,6 +1,8 @@
 package practices.questions.easy;
 
 import javax.inject.Inject;
+import javax.inject.Singleton;
+
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import practices.datastructure.SinglyLinkedList.ListNode;
@@ -30,6 +32,7 @@ import practices.questions.Solution;
  *
  *
  * */
+@Singleton
 public class MiddleOfLinkedList implements Solution<ListNode, ListNode> {
 
     @Inject
