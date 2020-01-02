@@ -4,6 +4,7 @@ import dagger.Component
 import practices.questions.easy.FizzBuzz
 import practices.questions.easy.TwoSum
 import practices.questions.medium.AddTwoNumbers
+import practices.questions.medium.CountingBits
 import javax.inject.Singleton
 
 @Singleton
@@ -15,5 +16,7 @@ interface TestAppComponent {
     fun provideTwoSum(): TwoSum
 
     fun provideAddTwoNumbers(): AddTwoNumbers
+
+    fun provideCountingBits(): CountingBits
 
 }

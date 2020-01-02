@@ -28,7 +28,7 @@ class CountingBits @Inject constructor() : Solution<Int, IntArray> {
 
     override fun solve(solutionIn: Int?): IntArray {
         solutionIn?.let {
-            secondAttempt(it)
+            return secondAttempt(it)
         }
         throw Exception(EMPTY_SOLUTION_IN)
     }
