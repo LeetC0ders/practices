@@ -5,6 +5,7 @@ import org.jetbrains.annotations.Nullable;
 import practices.questions.Solution;
 
 import javax.inject.Inject;
+import javax.inject.Singleton;
 import java.util.PriorityQueue;
 
 /*
@@ -20,6 +21,7 @@ import java.util.PriorityQueue;
  * Note:
  * You may assume k is always valid, 1 ≤ k ≤ array's length.
  * */
+@Singleton
 public class KthLargestNumber implements Solution<KthLargestNumber.Pair, Integer> {
 
     static class Pair {
