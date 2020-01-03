@@ -32,11 +32,11 @@ public class App {
         printProblemSolved(app.getAppComponent().provideCountingBits().getName());
         printProblemSolved(app.getAppComponent().provideFindAllNumbersDisappearedInArr().getName());
         printProblemSolved(app.getAppComponent().provideSummaryRanges().getName());
+        printProblemSolved(app.getAppComponent().provideSplitStringToBalancedString().getName());
 
         System.out.println();
 
         printProblemSolvedPendingTest(app.getAppComponent().provideLongestSubstringWithoutRepeatingCharacters().getName());
-        printProblemSolvedPendingTest(app.getAppComponent().provideSplitStringToBalancedString().getName());
         printProblemSolvedPendingTest(app.getAppComponent().provideBinaryTreeLevelOrderTraversal().getName());
         printProblemSolvedPendingTest(app.getAppComponent().provideReverseLinkedList().getName());
         printProblemSolvedPendingTest(app.getAppComponent().provideInvertBinaryTree().getName());
