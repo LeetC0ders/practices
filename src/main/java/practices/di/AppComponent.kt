@@ -52,6 +52,8 @@ interface AppComponent {
 
     fun provideMiddleOfLinkedList(): MiddleOfLinkedList
 
+    fun provideSummaryRanges(): SummaryRanges
+
     // Algorithms
     fun provideSelectionSort(): SelectionSort
 

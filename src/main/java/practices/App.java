@@ -31,6 +31,7 @@ public class App {
         printProblemSolved(app.getAppComponent().provideAddTwoNumbers().getName());
         printProblemSolved(app.getAppComponent().provideCountingBits().getName());
         printProblemSolved(app.getAppComponent().provideFindAllNumbersDisappearedInArr().getName());
+        printProblemSolved(app.getAppComponent().provideSummaryRanges().getName());
 
         System.out.println();
 

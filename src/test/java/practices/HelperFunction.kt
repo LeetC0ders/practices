@@ -31,6 +31,20 @@ fun intListToString(intList: List<Int>): String {
 }
 
 /**
+ * @param = List<Int>
+ * sample return:
+ * passed in: (1, 2, 3) of List
+ * return in "[1,2,3,]" as String
+ *
+ * sample return, EMPTY list
+ * passed in: empty list
+ * return in "[]" as String
+ */
+fun stringListToString(stringList: List<String>): String {
+    return "[${StringBuilder().apply { stringList.forEach { append("$it,") } }}]"
+}
+
+/**
  * @param = SinglyLinkedList.ListNode
  * sample return:
  * passed in: startNode 7 -> 8 -> 9
