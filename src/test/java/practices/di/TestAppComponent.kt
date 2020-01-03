@@ -6,6 +6,7 @@ import practices.questions.easy.FizzBuzz
 import practices.questions.easy.TwoSum
 import practices.questions.medium.AddTwoNumbers
 import practices.questions.medium.CountingBits
+import practices.questions.medium.SummaryRanges
 import javax.inject.Singleton
 
 @Singleton
@@ -21,5 +22,7 @@ interface TestAppComponent {
     fun provideCountingBits(): CountingBits
 
     fun provideFindAllNumberDisappearedInArr(): FindAllNumberDisappearedInArr
+
+    fun provideSummaryRanges(): SummaryRanges
 
 }
