@@ -33,6 +33,7 @@ public class App {
         printProblemSolved(app.getAppComponent().provideFindAllNumbersDisappearedInArr().getName());
         printProblemSolved(app.getAppComponent().provideSummaryRanges().getName());
         printProblemSolved(app.getAppComponent().provideSplitStringToBalancedString().getName());
+        printProblemSolved(app.getAppComponent().provideTopKFrequentWords().getName());
 
         System.out.println();
 

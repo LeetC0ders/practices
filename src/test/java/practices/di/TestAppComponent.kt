@@ -8,6 +8,7 @@ import practices.questions.easy.TwoSum
 import practices.questions.medium.AddTwoNumbers
 import practices.questions.medium.CountingBits
 import practices.questions.medium.SummaryRanges
+import practices.questions.medium.TopKFrequentWords
 import javax.inject.Singleton
 
 @Singleton
@@ -27,5 +28,7 @@ interface TestAppComponent {
     fun provideSummaryRanges(): SummaryRanges
 
     fun provideSplitStringToBalancedString(): SplitStringToBalancedString
+
+    fun provideTopKFrequentWords(): TopKFrequentWords
 
 }

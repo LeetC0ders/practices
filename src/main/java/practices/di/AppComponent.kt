@@ -54,6 +54,8 @@ interface AppComponent {
 
     fun provideSummaryRanges(): SummaryRanges
 
+    fun provideTopKFrequentWords(): TopKFrequentWords
+
     // Algorithms
     fun provideSelectionSort(): SelectionSort
 
