@@ -50,6 +50,12 @@ interface AppComponent {
 
     fun provideKthLargestNumber(): KthLargestNumber
 
+    fun provideMiddleOfLinkedList(): MiddleOfLinkedList
+
+    fun provideSummaryRanges(): SummaryRanges
+
+    fun provideTopKFrequentWords(): TopKFrequentWords
+
     // Algorithms
     fun provideSelectionSort(): SelectionSort
 

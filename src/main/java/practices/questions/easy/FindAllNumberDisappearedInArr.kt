@@ -23,7 +23,7 @@ class FindAllNumberDisappearedInArr @Inject constructor(): Solution<IntArray, Li
 
     override fun solve(solutionIn: IntArray?): List<Int> {
         solutionIn?.let {
-            firstAttempt(solutionIn)
+            return firstAttempt(solutionIn)
         }
         throw Exception(EMPTY_SOLUTION_IN)
     }
