@@ -1,7 +1,7 @@
 package practices.di
 
 import dagger.Component
-import practices.datastructure.SinglyLinkedList
+import practices.datastructureutil.SinglyLinkedList
 import practices.di.modules.DataStructureModule
 
 @Component(modules = [DataStructureModule::class])

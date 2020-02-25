@@ -5,7 +5,7 @@ import javax.inject.Singleton;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import practices.datastructure.SinglyLinkedList.ListNode;
+import practices.datastructureutil.SinglyLinkedList.ListNode;
 import practices.questions.Solution;
 
 /*

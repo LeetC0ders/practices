@@ -1,6 +1,6 @@
 package practices.questions.easy
 
-import practices.datastructure.SinglyLinkedList
+import practices.datastructureutil.SinglyLinkedList
 import practices.questions.Solution
 import java.util.*
 import javax.inject.Inject

@@ -1,4 +1,4 @@
-package practices.datastructure
+package practices.datastructureutil
 
 /*
   * The class is a singly linked listL

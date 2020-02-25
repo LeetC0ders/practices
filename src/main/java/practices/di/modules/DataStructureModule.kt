@@ -2,8 +2,8 @@ package practices.di.modules
 
 import dagger.Module
 import dagger.Provides
-import practices.datastructure.SinglyLinkedList
-import practices.datastructure.Tree
+import practices.datastructureutil.SinglyLinkedList
+import practices.datastructureutil.Tree
 
 @Module
 class DataStructureModule {

@@ -3,8 +3,8 @@ package practices.helperfunctiontest
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
-import practices.datastructure.SinglyLinkedList
-import practices.datastructure.SinglyLinkedList.ListNode
+import practices.datastructureutil.SinglyLinkedList
+import practices.datastructureutil.SinglyLinkedList.ListNode
 import practices.singlyLinkedListToString
 
 class SinglyLinkedListToStringTest {

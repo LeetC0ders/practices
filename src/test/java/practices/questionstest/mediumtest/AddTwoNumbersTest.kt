@@ -4,8 +4,8 @@ import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
-import practices.datastructure.SinglyLinkedList
-import practices.datastructure.SinglyLinkedList.ListNode
+import practices.datastructureutil.SinglyLinkedList
+import practices.datastructureutil.SinglyLinkedList.ListNode
 import practices.di.DaggerDataStructureComponent
 import practices.di.DaggerTestAppComponent
 import practices.questions.medium.AddTwoNumbers

@@ -1,6 +1,6 @@
 package practices
 
-import practices.datastructure.SinglyLinkedList
+import practices.datastructureutil.SinglyLinkedList
 
 /**
  * @param = IntArray

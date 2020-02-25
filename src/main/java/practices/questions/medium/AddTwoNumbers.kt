@@ -1,7 +1,7 @@
 package practices.questions.medium
 
-import practices.datastructure.SinglyLinkedList
-import practices.datastructure.SinglyLinkedList.ListNode
+import practices.datastructureutil.SinglyLinkedList
+import practices.datastructureutil.SinglyLinkedList.ListNode
 import practices.questions.EMPTY_SOLUTION_IN
 import practices.questions.Solution
 import java.util.*
