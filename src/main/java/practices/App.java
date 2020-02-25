@@ -6,19 +6,21 @@ package practices;
 import practices.di.AppComponent;
 import practices.di.DaggerAppComponent;
 import practices.di.DaggerDataStructureComponent;
+import practices.di.DataStructureComponent;
 
 public class App {
 
     private static int problemCounter = 0;
     private static int algoCounter = 0;
 
-    private AppComponent appComponent = DaggerAppComponent.builder().dataStructureComponent(
-            DaggerDataStructureComponent.create()).build();
+    private DataStructureComponent dataStructureComponent = DaggerDataStructureComponent.create();
+    private AppComponent appComponent = DaggerAppComponent.builder().dataStructureComponent(dataStructureComponent).build();
 
     public String getGreeting() {
         return "Hello, welcome to LeetCode practice";
     }
     private AppComponent getAppComponent() { return appComponent; }
+    private DataStructureComponent getDataStructureComponent() { return dataStructureComponent; }
 
     public static void main(String[] args) {
         App app = new App();
@@ -34,6 +36,10 @@ public class App {
         printProblemSolved(app.getAppComponent().provideSummaryRanges().getName());
         printProblemSolved(app.getAppComponent().provideSplitStringToBalancedString().getName());
         printProblemSolved(app.getAppComponent().provideTopKFrequentWords().getName());
+
+        System.out.println();
+
+        printDataStructureSolved(app.dataStructureComponent.provideStackImpl().getName());
 
         System.out.println();
 
@@ -64,6 +70,10 @@ public class App {
 
     private static void printProblemSolved(String problemName) {
         System.out.println("Problem #" + problemCounter++ + " problem name: " + problemName + " completed.");
+    }
+
+    private static void printDataStructureSolved(String dataStructureName) {
+        System.out.println("DS #" + problemCounter++ + " data structure name: " + dataStructureName + " completed.");
     }
 
     private static void printProblemSolvedPendingTest(String problemName) {

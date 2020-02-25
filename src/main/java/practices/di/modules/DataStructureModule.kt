@@ -2,6 +2,7 @@ package practices.di.modules
 
 import dagger.Module
 import dagger.Provides
+import practices.datastructureimpl.StackImpl
 import practices.datastructureutil.SinglyLinkedList
 import practices.datastructureutil.Tree
 
@@ -13,4 +14,9 @@ class DataStructureModule {
 
     @Provides
     fun provideSinglyLinkedList() = SinglyLinkedList()
+
+    @Provides
+    fun provideStackImpl(): StackImpl<String> {
+        return StackImpl(10)
+    }
 }
